@@ -13,15 +13,34 @@ class NetworkEquations:
         self.solve()
 
     def Nodes(self):
-        self.array_of_elements = np.array(['IFNGR', 'CSF2RA', 'IL1R', 'TLR4', 'FCGR', 'IL4RA', 'IL10R', 'STAT1', 'MSTAT5', 'MNFKB', 'PPARG', 'STAT6', 'JMJD3', 'STAT3', 'SOCS3', 'IRF3', 'ERK', 'KLF4', 'SOCS1', 'IRF4', 'IL1BOUT', 'IL12OUT', 'TAK123', 'JNKMAPK', 'ERK12', 'MSK12', 'GSK3B', 'IL10OUT', 'AKT1', 'AKT3', 'TLR2', 'TLR3', 'TLR7', 'TLR8', 'TLR9', 'MYD88', 'IRAK4', 'IRAK12', 'TRAF6', 'TAB23TAK', 'MKK36', 'P38', 'CREB1', 'MKK47', 'JNK', 'CJUN', 'MKK12', 'CFOS', 'MAP1', 'NEMOIKKB', 'RIP1', 'TLR4END', 'TRIF', 'TRAF3', 'TBK1IKKI', 'IKKA', 'IRF7', 'IL6OUT', 'IL18OUT', 'IL33OUT', 'IFNA', 'PHAGOCYTOSIS', 'PHAGOSOME', 'PROCESSING', 'MHC2', 'CD8086', 'ITAM', 'SYK', 'CARD9', 'VAV', 'RAC', 'CDC42', 'WASP', 'WAVE', 'MCA', 'LYN', 'FYN', 'DAP12', 'MPI3K', 'MPLC', 'MAKT', 'MPKC', 'CD11BCD18', 'HCK', 'FGR', 'FCAR', 'MMTOR', 'MMTORC1', 'MMTORC2', 'MLKB1', 'MAMPK', 'MGlycolysis', 'MOXPHOS', 'MAMPATPratio', 'MHIF1A', 'RIG1', 'MAVS', 'TRADD', 'NEMOIKKAB', 'NEMOTBK1IKKE', 'TNFR1', 'TRAF2', 'TNFAOUT', 'TCR', 'CD28', 'AP1', 'CD25', 'IL2G', 'IL2E', 'MTOR', 'ZAP70', 'STAT5', 'NFAT', 'NFKB', 'AKT', 'CTLA4', 'CTLA4DIM', 'BCL2', 'NDRG1', 'DAG', 'SOS', 'RASGTPR', 'LCK', 'PDK1', 'LAT', 'PLC', 'PI3K', 'PIP2', 'PIP3', 'IP3', 'CA', 'PKC', 'TBET', 'IFNG', 'GATA3', 'IL4', 'FOXP3', 'IL10', 'TGFB', 'RORGT', 'IL21', 'IL17', 'BCL6', 'IL9', 'CD40L', 'MTORC1', 'MTORC2', 'LKB1', 'AMPK', 'Glycolysis', 'GLUTAMINOLISIS', 'AKG', 'OXPHOS', 'AMPATPratio', 'HIF1A'])
+        self.array_of_elements = np.array(['IFNGR', 'CSF2RA', 'IL1R', 'TLR4', 'FCGR', 'IL4RA', 'IL10R', 'STAT1', 'MSTAT5', 'MNFKB',
+                                           'PPARG', 'STAT6', 'JMJD3', 'STAT3', 'SOCS3', 'IRF3', 'ERK', 'KLF4', 'SOCS1', 'IRF4',
+                                           'IL1BOUT', 'IL12OUT', 'TAK123', 'JNKMAPK', 'ERK12', 'MSK12', 'GSK3B', 'IL10OUT', 'AKT1', 'AKT3',
+                                           'TLR2', 'TLR3', 'TLR7', 'TLR8', 'TLR9', 'MYD88', 'IRAK4', 'IRAK12', 'TRAF6', 'TAB23TAK',
+                                           'MKK36', 'P38', 'CREB1', 'MKK47', 'JNK', 'CJUN', 'MKK12', 'CFOS', 'MAP1', 'NEMOIKKB',
+                                           'RIP1', 'TLR4END', 'TRIF', 'TRAF3', 'TBK1IKKI', 'IKKA', 'IRF7', 'IL6OUT', 'IL18OUT', 'IL33OUT',
+                                           'IFNA', 'PHAGOCYTOSIS', 'PHAGOSOME', 'PROCESSING', 'MHC2', 'CD8086', 'ITAM', 'SYK', 'CARD9', 'VAV',
+                                           'RAC', 'CDC42', 'WASP', 'WAVE', 'MCA', 'LYN', 'FYN', 'DAP12', 'MPI3K', 'MPLC',
+                                           'MAKT', 'MPKC', 'CD11BCD18', 'HCK', 'FGR', 'FCAR', 'MMTOR', 'MMTORC1', 'MMTORC2', 'MLKB1',
+                                           'MAMPK', 'MGlycolysis', 'MOXPHOS', 'MAMPATPratio', 'MHIF1A', 'RIG1', 'MAVS', 'TRADD', 'NEMOIKKAB','NEMOTBK1IKKE',
+                                           'TNFR1', 'TRAF2', 'TNFAOUT', 'TCR', 'CD28', 'AP1', 'CD25', 'IL2G', 'IL2E', 'MTOR',
+                                           'ZAP70', 'STAT5', 'NFAT', 'NFKB', 'AKT', 'CTLA4', 'CTLA4DIM', 'BCL2', 'NDRG1', 'DAG',
+                                           'SOS', 'RASGTPR', 'LCK', 'PDK1', 'LAT', 'PLC', 'PI3K', 'PIP2', 'PIP3', 'IP3',
+                                           'CA', 'PKC', 'TBET', 'IFNG', 'GATA3', 'IL4', 'FOXP3', 'IL10', 'TGFB','RORGT',
+                                           'IL21', 'IL17', 'BCL6', 'IL9', 'CD40L', 'MTORC1', 'MTORC2', 'LKB1', 'AMPK','Glycolysis',
+                                           'GLUTAMINOLISIS', 'AKG', 'OXPHOS', 'AMPATPratio', 'HIF1A'])
         self.n = len(self.array_of_elements)
         self.initial_conditions=np.array([0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1, 0.0, 0.2, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1, 0.0, 0.0, 0.0, 0.2, 0.0, 0.0])
         return self.array_of_elements
 
     def networkparameters(self):
-        self.out_of_network_arguments = np.array(['b', 'LP', 'DSRNA', 'SSRNA', 'CPGDNA', 'IFNGE', 'IFNGL', 'MHC2E', 'CD8086E', 'GMCSFE', 'IL1BE', 'LPSE', 'IL4E', 'IL4L', 'TGFBE', 'IL10E', 'IL10L', 'IL12E', 'IC3B', 'IGGC', 'IGAC', 'IL6E', 'IL21E', 'IL18E', 'IL33E', 'MGLC', 'GLC', 'CITDSRNA', 'CITSSRNA', 'TNFA', 'CIAP', 'GLN', 'MFA', 'FA', 'TRP', 'MO2', 'O2', 'METF', 'RAPA', 'PRED', 'CS', 'TCD8086', 'TMHC2'])
+        self.out_of_network_arguments = np.array(['b', 'LP', 'DSRNA', 'SSRNA', 'CPGDNA', 'IFNGE', 'IFNGL', 'MHC2E', 'CD8086E', 'GMCSFE',
+                                                  'IL1BE', 'LPSE', 'IL4E', 'IL4L', 'TGFBE', 'IL10E', 'IL10L', 'IL12E', 'IC3B', 'IGGC',
+                                                  'IGAC', 'IL6E', 'IL21E', 'IL18E', 'IL33E', 'MGLC', 'GLC', 'CITDSRNA', 'CITSSRNA', 'TNFA',
+                                                  'CIAP', 'GLN', 'MFA', 'FA', 'TRP', 'MO2', 'O2', 'METF', 'RAPA', 'PRED',
+                                                  'CS', 'TCD8086', 'TMHC2'])
         self.out_of_network_names = np.array(['Saturation rate', 'Lipoproteins (LP)', 'Double-stranded RNA (dsRNA)', 'Single-stranded RNA (ssRNA)', 'CpG DNA (unmethylated bacterial DNA)', 'Interferon gamma (external)', 'Interferon gamma (local)', 'MHC class II (external)', 'CD80/CD86 (external)', 'Granulocyte-macrophage colony-stimulating factor (GM-CSF)', 'Interleukin-1 beta (external)', 'LPS (Lipopolysaccharide)', 'Interleukin-4 (external)', 'Interleukin-4 (local)', 'Transforming growth factor beta (TGF-β)', 'Interleukin-10 (external)', 'Interleukin-10 (local)', 'Interleukin-12 (local)', 'Complement component iC3b', 'Immunoglobulin G (IgG immune complexes)', 'Immunoglobulin A (IgA immune complexes)', 'Interleukin-6 (local)', 'Interleukin-21 (local)', 'Interleukin-18 (local)', 'Interleukin-33 (local)', 'Glucose (macrophage)', 'Glucose', 'Cytosolic double-stranded RNA', 'Cytosolic single-stranded RNA', 'Tumor necrosis factor alpha (TNF-α)', 'Cellular inhibitors of apoptosis proteins (cIAP)', 'Glutamine', 'Macrophage fatty acids', 'Fatty acids', 'Tryptophan', 'Molecular oxygen (macrophage)', 'Molecular oxygen', 'Methionine flux', 'Rapamycin (mTOR inhibitor)', 'Prednisone (glucocorticoid)', 'Cholesterol synthesis / cellular sterols', 'CD28-CD80/CD86 interaction time', 'TCR-MHC II interaction time'])
-        self.initial_out=np.array([10, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1, 1.0, 0.0, 0.0, 0.0, 0.0, 1, 1, 1, 1, 1, 1, 0.0, 0.0, 0.0, 0.0, 30, 20])
+        self.initial_out=np.array([8, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1, 1.0, 0.0, 0.0, 0.0, 0.0, 1, 1, 1, 1, 1, 1, 0.0, 0.0, 0.0, 0.0, 30, 25])
         return self.out_of_network_arguments
 
     def create_ode_system(self, af=None, decay_rates=None, threshold_values=None):
@@ -39,13 +58,13 @@ class NetworkEquations:
             return x**n / (Kd**n + x**n)
         def system_ode(t, q, *p):
             w = np.zeros(len(q))
-            w[0] = p[5]
+            w[0] = (p[5]+q[133]-p[5]*q[133])
             w[1] = p[9]
             w[2] = (p[10]+q[20]-p[10]*q[20])
             w[3] = p[11]
             w[4] = ((p[19]+p[19]*p[10]-p[19]*p[19]*p[10])+q[30]-(p[19]+p[19]*p[10]-p[19]*p[19]*p[10])*q[30])
-            w[5] = p[12]
-            w[6] = (p[15]+q[27]-p[15]*q[27])
+            w[5] = (p[12]+q[135]-p[12]*q[135])
+            w[6] = ((p[15]+q[27]-p[15]*q[27])+q[137]-(p[15]+q[27]-p[15]*q[27])*q[137])
             w[7] = q[0]*(1-(q[18]+q[13]-q[18]*q[13]))
             w[8] = q[1]*(1-((q[13]+q[19]-q[13]*q[19])+q[18]-(q[13]+q[19]-q[13]*q[19])*q[18]))
             w[9] = (((((q[2]+q[49]-q[2]*q[49])+q[68]-(q[2]+q[49]-q[2]*q[49])*q[68])+q[80]-((q[2]+q[49]-q[2]*q[49])+q[68]-(q[2]+q[49]-q[2]*q[49])*q[68])*q[80])+q[81]-(((q[2]+q[49]-q[2]*q[49])+q[68]-(q[2]+q[49]-q[2]*q[49])*q[68])+q[80]-((q[2]+q[49]-q[2]*q[49])+q[68]-(q[2]+q[49]-q[2]*q[49])*q[68])*q[80])*q[81])+q[50]*q[101]*p[30]-((((q[2]+q[49]-q[2]*q[49])+q[68]-(q[2]+q[49]-q[2]*q[49])*q[68])+q[80]-((q[2]+q[49]-q[2]*q[49])+q[68]-(q[2]+q[49]-q[2]*q[49])*q[68])*q[80])+q[81]-(((q[2]+q[49]-q[2]*q[49])+q[68]-(q[2]+q[49]-q[2]*q[49])*q[68])+q[80]-((q[2]+q[49]-q[2]*q[49])+q[68]-(q[2]+q[49]-q[2]*q[49])*q[68])*q[80])*q[81])*q[50]*q[101]*p[30])*(1-(((q[13]+q[10]-q[13]*q[10])+q[17]-(q[13]+q[10]-q[13]*q[10])*q[17])+q[42]-((q[13]+q[10]-q[13]*q[10])+q[17]-(q[13]+q[10]-q[13]*q[10])*q[17])*q[42]))
@@ -127,8 +146,8 @@ class NetworkEquations:
             w[85] = p[20]
             w[86] = (q[80]+q[9]-q[80]*q[9])
             w[87] = q[86]*(q[80]+q[9]-q[80]*q[9])*(1-q[90])
-            w[88] = (q[86]*q[90]+q[86]*p[12]-q[86]*q[90]*q[86]*p[12])
-            w[89] = ((q[80]*q[93]+p[12]-q[80]*q[93]*p[12])+p[15]-(q[80]*q[93]+p[12]-q[80]*q[93]*p[12])*p[15])
+            w[88] = (q[86]*q[90]+q[86]*(p[12]+q[135]-p[12]*q[135])-q[86]*q[90]*q[86]*(p[12]+q[135]-p[12]*q[135]))
+            w[89] = ((q[80]*q[93]+(p[12]+q[135]-p[12]*q[135])-q[80]*q[93]*(p[12]+q[135]-p[12]*q[135]))+((p[15]+q[137]-p[15]*q[137])+q[27]-(p[15]+q[137]-p[15]*q[137])*q[27])-(q[80]*q[93]+(p[12]+q[135]-p[12]*q[135])-q[80]*q[93]*(p[12]+q[135]-p[12]*q[135]))*((p[15]+q[137]-p[15]*q[137])+q[27]-(p[15]+q[137]-p[15]*q[137])*q[27]))
             w[90] = (q[89]+(q[74]+q[80]-q[74]*q[80])*q[93]-q[89]*(q[74]+q[80]-q[74]*q[80])*q[93])*(1-q[87])
             w[91] = (q[87]+q[94]-q[87]*q[94])*p[25]
             w[92] = q[90]*p[32]
@@ -199,7 +218,7 @@ class NetworkEquations:
 
         return system_ode
 
-    def solve(self, t_span=(0, 40), t_eval=None, grinitial_conditions=None, grmethod=None, grout_of_the_network_arguments_eval=None, af=None, decay_rates_list=None, grthreshold_values=None):
+    def solve(self, t_span=(0, 55), t_eval=None, grinitial_conditions=None, grmethod=None, grout_of_the_network_arguments_eval=None, af=None, decay_rates_list=None, grthreshold_values=None):
         if grinitial_conditions is None:
             grinitial_conditions = self.initial_conditions
         if grmethod is None:
@@ -315,7 +334,6 @@ class BooleanToFuzzyProbabilistic:
         return f"_A{marker_number}_"
 from dataclasses import dataclass
 from typing import Dict, List, Optional, Any
-
 @dataclass
 class PlotConfig:
     variables: List[str]
@@ -358,32 +376,32 @@ SUBNETWORKS = {
         variables=['MNFKB', 'MAP1', 'IRF3', 'IRF4', 'IRF7'],
         labels=['NF-κB', 'AP-1', 'IRF3', 'IRF4', 'IRF7'],
         colors=['#6A5ACD', '#FF69B4', '#00FA9A', '#FF4500', '#9932CC'],
-        styles=['-', '-', '-', '-', '-'],
+        styles=['-.', '-', '-', '-', '-'],
         legfontsize=12,
         legncol=2,
         title='Transcription factors'
     ),
     'Secreted cytokines': PlotConfig(
         variables=['IL6OUT', 'IL12OUT', 'IL18OUT', 'IL33OUT', 'IL10OUT','IFNA','IL1BOUT', 'TNFAOUT'],
-        labels=['IL6', 'IL12', 'IL18', 'IL33', 'IL10','IFN-α','IL-1β','TNF-α'],
-        colors=['tab:brown', 'tab:cyan', 'tab:red', 'yellow', 'blueviolet', '#3CB371', '#FF6347', '#000000'],
-        styles=[':', ':', ':', ':', ':', '-', ':', '-'],
+        labels=['IL-6', 'IL-12', 'IL-18', 'IL-33', 'IL-10','IFN-α','IL-1β','TNF-α'],
+        colors=['brown','tab:brown', 'tab:cyan', 'tab:red', 'orange', 'blueviolet', '#3CB371', '#FF6347', '#000000'],
+        styles=['-.',':', ':', ':', '-.', ':', '-', ':', '-'],
         legfontsize=12,
         legncol=2,
         title='Secreted cytokines'
     ),
     'M1': PlotConfig(
         variables=['IFNA', 'IL1BOUT', 'IL6OUT', 'IL12OUT', 'IL33OUT', 'IL18OUT', 'TNFAOUT'],
-        labels=['IFN-α', 'IL-1β', 'IL-6', 'IL-12', 'IL-33', 'IL-18', 'TNF-α'],
-        colors=['#3CB371', '#FF6347','tab:brown','tab:cyan', 'yellow', 'tab:red', '#000000'],
-        styles=['-', ':', ':', ':', ':', ':', '-'],
+        labels=['IFN-α', 'IL-1β', 'IL6', 'IL12', 'IL33', 'IL18', 'TNF-α'],
+        colors=['#3CB371', '#FF6347','tab:brown','tab:cyan', 'orange', 'tab:red', '#000000'],
+        styles=['-', ':', ':', ':', '-.', ':', '-'],
         legfontsize=11,
-        legncol=3,
+        legncol=2,
         title='M1'
     ),
     'M2a': PlotConfig(
         variables=['PPARG', 'IL10OUT', 'JMJD3', 'STAT6'],
-        labels=['PPAR-γ', 'IL-10', 'JMJD3', 'STAT6'],
+        labels=['PPAR-γ', 'IL10', 'JMJD3', 'STAT6'],
         colors=['#DAA520','blueviolet', '#20B2AA', '#CD5C5C'],
         styles=['-', ':', '-', '-'],
         legfontsize=12,
@@ -391,8 +409,8 @@ SUBNETWORKS = {
         title='M2a'
     ),
     'M2b': PlotConfig(
-        variables=['ERK', 'IL10OUT'],
-        labels=['ERK', 'IL-10'],
+        variables=['ERK', 'IL10OUT' ],
+        labels=['ERK', 'IL10'],
         colors=['#B8860B', 'blueviolet'],
         styles=['-', ':'],
         legfontsize=12,
@@ -401,20 +419,20 @@ SUBNETWORKS = {
     ),
     'M2c': PlotConfig(
         variables=['STAT3', 'IL10OUT'],
-        labels=['STAT3', 'IL-10'],
+        labels=['STAT3', 'IL10'],
         colors=['#DB7093','blueviolet'],
         styles=['-', ':'],
         legfontsize=12,
         legncol=1,
         title='M2c'
     ),
-    'Lymphocytes phenotype': PlotConfig(
+    'Lymphocyte phenotype': PlotConfig(
         variables=['TBET', 'GATA3', 'RORGT', 'FOXP3', 'BCL6'],
         labels=['Th1', 'Th2', 'Th17', 'Treg', 'Tfh'],
         colors=['#228B22', '#4B0082', '#008080', '#B22222', '#A0522D'],
         styles=['-', '-', '-', '-', '-'],
         legfontsize=12,
-        legncol=2,
+        legncol=1,
         title='Lymphocyte phenotype'
     ),
     'Lymphocyte inputs': PlotConfig(
@@ -445,10 +463,10 @@ SUBNETWORKS = {
         title='Metabolism'
     ),
     'T Transcription factors': PlotConfig(
-        variables=['NFKB','AP1', 'NFAT'],
-        labels=['NFKB','AP1', 'NFAT'],
-        colors=['#6A5ACD', '#FF69B4', '#FFB6C1'],
-        styles=['-', '-', '-'],
+        variables=['AP1', 'NFAT', 'NFKB'],
+        labels=['AP1', 'NFAT', 'NFKB'],
+        colors=['#FF69B4', '#FFB6C1', 'black'],
+        styles=['-', '-', '-.'],
         legfontsize=12,
         legncol=2,
         title='Transcription factors'
@@ -456,7 +474,7 @@ SUBNETWORKS = {
     'Activation markers': PlotConfig(
         variables=['IL2G', 'MTORC1', 'MTORC2'],
         labels=['IL2G', 'MTORC1', 'MTORC2'],
-        colors=['#FA8072', 'grey', '#C71585'],
+        colors=['#FA8072', '#F4A460', '#C71585'],
         styles=['-', '-', '-'],
         legfontsize=12,
         legncol=2,
@@ -519,7 +537,7 @@ class NetworkInterface(NetworkEquations):
     DEFAULT_SLIDER_VALUE = 0.5
 
     #
-    DEFAULT_TIME_SPAN = (0, 40)
+    DEFAULT_TIME_SPAN = (0, 55)
     DEFAULT_DECAY_RATE = 1.0
     DEFAULT_THRESHOLD_VALUE = 0.5
     MAX_NODES_TO_PLOT = 16
@@ -590,6 +608,8 @@ class NetworkInterface(NetworkEquations):
         self.subnetwork_options = list(features.keys())
         self.last_results = None
         self.subnetwork_name = None
+        self.last_fig2 = None
+        self.last_fig3 = None
         self.gradio_interface()
     def create_bar_chart(self, axi, labels, labels_mute, values, title,
                       bbox_position, ncol=1, y_limit=None):
@@ -606,7 +626,7 @@ class NetworkInterface(NetworkEquations):
 
     def create_macrophage_inputs_chart(self, axi, bars_reference, subr, bbox_position):
         labels = ['TGFBE', 'IFNGE', 'IL10E', 'IL4E', 'IL1BE', 'TNFA']
-        labels_mute = ['TGFB', 'IFNG', 'IL10', 'IL4', 'IL1B', 'TNFA']
+        labels_mute = ['TGFB', 'IFNG', 'IL10', 'IL4E', 'IL1B', 'TNFA']
         values = [bars_reference[label] for label in labels]
         return self.create_bar_chart(axi, labels, labels_mute, values, subr,
                                        bbox_position, ncol=1, y_limit=self.BAR_Y_LIMIT)
@@ -652,12 +672,11 @@ class NetworkInterface(NetworkEquations):
         axi.set_ylim(*self.PLOT_Y_RANGE)
         axi.grid(False)
         return axi
-
-    def design_and_personalize_subplots(self, results, inputs):
-        n_rows = ceil(len(self.features.keys()) / self.SUBPLOT_COLUMNS)
+    def design_and_personalize_subplots(self, results, inputs, start_idx, end_idx):
+        n_rows = ceil(len(list(self.features.keys())[start_idx:end_idx]) / self.SUBPLOT_COLUMNS)
         fig2, axis = plt.subplots(n_rows, self.SUBPLOT_COLUMNS, figsize=(self.SUBPLOT_FIGURE_WIDTH, self.SUBPLOT_HEIGHT_MULTIPLIER * n_rows), layout="constrained")
         axis = axis.flatten()
-        sub_names = list(self.features.keys())
+        sub_names = list(self.features.keys())[start_idx:end_idx]
         positions_bbox_to_anchor = {subr: (self.LEGEND_BBOX_X, self.LEGEND_BBOX_Y, self.LEGEND_BBOX_WIDTH, self.LEGEND_BBOX_HEIGHT)
                                      for subr in self.features}
         bars_reference = dict(zip(self.out_of_network_arguments, inputs))
@@ -667,14 +686,14 @@ class NetworkInterface(NetworkEquations):
                 self.create_macrophage_inputs_chart(axi, bars_reference,config.title, positions_bbox_to_anchor[subr])
             elif subr == 'Lymphocyte inputs':
                 self.create_lymphocyte_inputs_chart(axi, bars_reference,config.title, positions_bbox_to_anchor[subr])
-            elif subr == 'Lymphocytes phenotype':
+            elif subr == 'Lymphocyte phenotype':
                 self.create_lymphocyte_phenotypes_chart(axi, results, subr)
             else:
                 self.create_line_plot(axi, results, subr, positions_bbox_to_anchor[subr], config.legncol)
         for j in range(idx + 1, len(axis)):
             axis[j].set_visible(False)
         plt.show()
-        fig2.get_layout_engine().set(h_pad=self.SUBPLOT_TIGHT_PAD,w_pad=self.SUBPLOT_TIGHT_PAD_Y)
+        fig2.get_layout_engine().set(h_pad=self.SUBPLOT_TIGHT_PAD)
         return fig2
 
     def _create_slider(self, label: str, minimum: float = DEFAULT_MIN_SLIDER,
@@ -755,14 +774,6 @@ class NetworkInterface(NetworkEquations):
                 all_sliders_alpha = self.create_slider_group(labels_dr, values_dr,
                                                                 minimums=0, maximums=10,
                                                                 exceptions=None, n_columns=5)
-                with gr.Row():
-                    reset_decay_rates_sliders = gr.Button('Reset decay rates', variant='secondary')
-
-                labels_dr = [f'Decay rate: ({par})' for par in self.array_of_elements]
-                values_dr = [self.DEFAULT_DECAY_RATE for _ in range(self.n)]
-                all_sliders_alpha = self.create_slider_group(labels_dr, values_dr,
-                                                                minimums=0, maximums=10,
-                                                                exceptions=None, n_columns=5)
 
         return solve_btn_in, reset_network_params, all_sliders_out, all_sliders_input, all_sliders_alpha, reset_decay_rates_sliders
 
@@ -805,9 +816,19 @@ class NetworkInterface(NetworkEquations):
     def Results_tab(self):
         with gr.Tab("Results"):
             solve_btn_re = gr.Button("Simulate network dynamics", variant="primary")
-            with gr.Column():
+            with gr.Row():
                 GPlot = gr.Plot()
-        return solve_btn_re, GPlot
+            with gr.Row():
+                LymphoPlot = gr.Plot()
+            with gr.Row():
+                with gr.Column():
+                    download_btn_fig2 = gr.Button("Download Figure 2 (Subplots 0-10) as JPG", variant="secondary")
+                    download_fig2 = gr.File(label="Download Fig2", visible=True)
+                with gr.Column():
+                    download_btn_fig3 = gr.Button("Download Figure 3 (Subplots 10-20) as JPG", variant="secondary")
+                    download_fig3 = gr.File(label="Download Fig3", visible=True)
+        return solve_btn_re, GPlot, LymphoPlot, download_btn_fig2, download_fig2, download_btn_fig3, download_fig3
+
 
     def Boolean_to_Fuzzy_tab(self):
         with gr.Tab("Convert and process your own boolean networks"):
@@ -833,7 +854,7 @@ class NetworkInterface(NetworkEquations):
             with gr.Row():
                 with gr.Column():
                     archivo_out_boolean = gr.File(
-                        label="📥 Probablistic expression file",
+                        label="📥 Probablistic expressions file",
                         interactive=False
                     )
             info_text = gr.Textbox(label="ℹ️ Information", lines=3)
@@ -852,6 +873,11 @@ class NetworkInterface(NetworkEquations):
             with gr.Row():
                 figura = gr.Plot()
             return solve_btn_pc, select_box, figura
+    def save_matplotlib_as_jpg(self, fig: plt.Figure, filename: str = "plot.jpg") -> str:
+        import tempfile
+        temp_file = tempfile.NamedTemporaryFile(delete=False, suffix='.jpg')
+        fig.savefig(temp_file.name, format='jpg', dpi=300, bbox_inches='tight')
+        return temp_file.name
     def gradio_interface(self, n_columns: int = 5):
         with gr.Blocks(title="Network simulator") as demo:
             activation = gr.Dropdown(
@@ -877,7 +903,7 @@ class NetworkInterface(NetworkEquations):
                 solve_btn_in, reset_network_params, all_sliders_out, all_sliders_input, all_sliders_alpha, reset_decay_rates_sliders = self.Inputs_tab('Inputs', n_columns)
                 solve_btn_ic, restart_initial_conditions, set_gaussian_ic, all_sliders_ic = self.Initial_conditions_tab()
                 solve_btn_tv, reset_threshold_values, all_sliders_threshold = self.Thresholds_tab()
-                solve_btn_re, GPlot = self.Results_tab()
+                solve_btn_re, GPlot, LymphoPlot, download_btn_fig2, download_fig2, download_btn_fig3, download_fig3= self.Results_tab()
                 procesar_btn, limpiar_btn, archivo_boolean, archivo_nodes, archivo_inputs, archivo_out_boolean, info_text = self.Boolean_to_Fuzzy_tab()
                 solve_btn_pc, select_box, figura = self.Plot_custom_tab()
 
@@ -927,9 +953,16 @@ class NetworkInterface(NetworkEquations):
                 button.click(
                     fn=self.after_push_button,
                     inputs=variables_to_control,
-                    outputs=[figura, GPlot]
+                    outputs=[figura, GPlot, LymphoPlot]
                 )
-
+            download_btn_fig2.click(
+                fn=lambda: self.save_matplotlib_as_jpg(self.last_fig2, "subplots_0_10.jpg") if self.last_fig2 else None,
+                outputs=download_fig2
+            )
+            download_btn_fig3.click(
+                fn=lambda: self.save_matplotlib_as_jpg(self.last_fig3, "subplots_10_20.jpg") if self.last_fig3 else None,
+                outputs=download_fig3
+            )
             convertidor = BooleanToFuzzyProbabilistic()
             procesar_btn.click(
                 fn=convertidor.process_file,
@@ -937,7 +970,7 @@ class NetworkInterface(NetworkEquations):
                 outputs=[archivo_out_boolean, info_text]
             )
 
-        return demo.launch()
+        return demo.launch(share=False)
     def after_push_button(self, *values):
         nodes = values[:self.n]
         out_params = values[self.n:self.n + len(self.out_of_network_arguments)]
@@ -960,8 +993,11 @@ class NetworkInterface(NetworkEquations):
         )
         self.last_results = Resultados
         Fig1 = self.plot_results(Resultados, selection_box_plot)
-        Fig3 = self.create_Plot(out_params)
-        return Fig1, Fig3
+        Fig2 = self.design_and_personalize_subplots(Resultados, out_params, start_idx=0, end_idx=10)
+        Fig3 = self.design_and_personalize_subplots(Resultados, out_params, start_idx=10, end_idx=20)
+        self.last_fig2 = Fig2
+        self.last_fig3 = Fig3
+        return Fig1, Fig2, Fig3
 
     def set_gaussian_conditions(self, val: str):
         if val == '0':
@@ -993,11 +1029,11 @@ class NetworkInterface(NetworkEquations):
 
     def set_decay_rates(self, *values):
         return np.ones(self.n).tolist()
-    def create_Plot(self, external_inputs):
+    def create_Plot(self, external_inputs,s_idx,e_idx):
         if self.last_results is None:
             return go.Figure().update_layout(title='Run a network simulation first')
         else:
-            Figura = self.design_and_personalize_subplots(self.last_results, external_inputs)
+            Figura = self.design_and_personalize_subplots(self.last_results, external_inputs, s_idx, e_idx)
             return Figura
     def plot_results(self, results: dict = None, options: list = None) -> go.Figure:
         if options is None:
