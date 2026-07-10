@@ -1,2 +1,0 @@
-Here I will add the files related to the macrophages network. 
-  This file should containg just things regarding the MacrophagesNetwork
