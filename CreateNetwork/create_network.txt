@@ -1,0 +1,1 @@
+This folder contains the  scripts to build any network from scratch and tests performed to make sure the network works well.
