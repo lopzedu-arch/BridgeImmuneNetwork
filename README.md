@@ -21,7 +21,7 @@ Option 1: Google Colab (Quick setup, cloud-based)
 
     Click on  MacroLymph_Net_July28.ipynb in this repository.
 
-    Select the option open in Google Collab.
+    Select the option open in Collab.
 
 Option 2: Local Environment (Recommended for speed)
 
