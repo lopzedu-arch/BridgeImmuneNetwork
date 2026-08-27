@@ -21,13 +21,13 @@ Option 1: Google Colab (Quick setup, cloud-based)
 
     Click on  MacroLymph_Net_July28.ipynb in this repository.
 
-    Select the option open in Collab.
+    Select the option open in Colab.
 
 Option 2: Local Environment (Recommended for speed)
 
 Running the code on your local machine significantly improves performance:
     
-    Copy the from the aforementioned google Collab page and paste it your notebook.
+    Copy the from the aforementioned google Colab page and paste it in your notebook.
     
     Expected speed: ~2 seconds per simulation (compared to ~10 seconds on Colab).
 
