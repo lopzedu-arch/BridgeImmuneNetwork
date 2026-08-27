@@ -32,5 +32,5 @@ abstract: >
   This software simulates a macrophage-lymphocyte network using a combination of differential
   equation solving and fuzzy-logic probabilistic interpretation of boolean
   expressions. It includes an interactive graphical interface built with Gradio for quick exploration.
-  The code was used in the article: Model of the macrophage-lymphocyte bridge
-in the immune response.
+  The code was used in the article: Macrophage–lymphocyte interaction in the immune response to SARS-CoV-2: a dynamic
+  functional model.
