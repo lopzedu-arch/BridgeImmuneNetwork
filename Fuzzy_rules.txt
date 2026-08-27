@@ -1,5 +1,5 @@
 ##########################
-Fuzzy-logic interpretation of the boolean weights
+Fuzzy-logic interpretation of the boolean rules
 ###########################
 WIFNGR = IFNGE
 WCSF2RA = GMCSFE
