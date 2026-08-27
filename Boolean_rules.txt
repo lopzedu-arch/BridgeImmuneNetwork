@@ -1,5 +1,5 @@
 # ===========================================
-# Boolean weights 
+# Boolean rules
 # ===========================================
 WIFNGR = (IFNGE|IFNG)
 WCSF2RA = GMCSFE
